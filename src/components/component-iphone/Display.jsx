@@ -1,13 +1,17 @@
 import React from 'react'
 
-function Display() {
+function Display({ operation, result }) {
+
+    // set default values
+    operation = operation.length === 0 ? '0' : operation;
+    result === "" ? result = "" : result = `= ${result}`
     return (
         <div>
-            <div class="calc-screen-primary" onselectstart="return true" id="display-primary">
-                0000000
+            <div className="calc-screen-primary" onselectstart="return true" id="display-primary">
+                {operation}
             </div>
-            <div class="calc-screen-secondary" onselectstart="return true" id="display-secondary">
-                = 0000000
+            <div className="calc-screen-secondary" onselectstart="return true" id="display-secondary">
+                {result}
             </div>
         </div>
     )

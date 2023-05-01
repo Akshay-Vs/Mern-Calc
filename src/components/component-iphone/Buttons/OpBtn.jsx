@@ -2,7 +2,7 @@ import React from 'react'
 
 function OpBtn(props) {
     return (
-        <div className="op-button" id={props.children}>{props.children}</div>
+        <div onClick={props.onClick} className="op-button" id={props.children}>{props.children}</div>
     )
 }
 
